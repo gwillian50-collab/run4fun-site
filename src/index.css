@@ -182,8 +182,6 @@ p {
   width: 42%;
   max-width: 480px;
   opacity: 0.15;
-  filter: brightness(0) saturate(100%) invert(89%) sepia(86%) saturate(1117%)
-    hue-rotate(33deg) brightness(104%) contrast(101%);
 }
 
 .logo-deco--cta {
