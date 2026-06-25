@@ -429,6 +429,13 @@ p {
   border-radius: var(--radius-lg);
   padding: 28px;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.cta-card .btn {
+  margin-top: auto;
+  align-self: flex-start;
 }
 
 .cta-card__title {
