@@ -34,7 +34,8 @@ export default function Home() {
           <div className="section__body">
             <p>
               A Run4Fun nasceu de quatro amigos que perceberam uma coisa: corrida é
-              uma desculpa incrível pra aproximar gente.
+              uma desculpa incrível pra aproximar gente. Começou como um grupo de
+              WhatsApp pra marcar corridas de fim de semana &mdash; e virou isso aqui.
             </p>
             <p>
               Não somos uma assessoria esportiva. Não vivemos de planilha, pace ou

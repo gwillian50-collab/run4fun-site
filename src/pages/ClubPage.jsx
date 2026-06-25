@@ -27,6 +27,9 @@ export default function ClubPage() {
             <p>
               A gente acredita que a corrida é só a ferramenta. O verdadeiro valor
               está na comunidade construída antes, durante e depois dos treinos.
+              Tem gente que vem pelo treino e fica pela galera &mdash; e tem gente que
+              nem gostava tanto de correr até descobrir que tinha um motivo bom
+              pra continuar.
             </p>
             <p>
               Não somos uma assessoria esportiva tradicional, e também não somos
