@@ -19,6 +19,7 @@
   --radius-full: 999px;
 
   --font-display: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-heading: 'Space Grotesk', var(--font-display);
 }
 
 *,
@@ -59,6 +60,9 @@ h3,
 h4 {
   margin: 0;
   line-height: 1.15;
+  font-family: var(--font-heading);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 p {
@@ -91,7 +95,7 @@ p {
 .section__body {
   font-size: 1.05rem;
   color: var(--text-secondary);
-  max-width: 640px;
+  max-width: 800px;
   line-height: 1.7;
 }
 
@@ -164,6 +168,38 @@ p {
   color: var(--text-secondary);
 }
 
+/* ── Decorative logo element ── */
+.logo-deco {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+.logo-deco--hero {
+  right: -4%;
+  bottom: -20%;
+  width: 42%;
+  max-width: 480px;
+  opacity: 0.07;
+}
+
+.logo-deco--cta {
+  right: 2%;
+  bottom: -15%;
+  width: 28%;
+  max-width: 340px;
+  opacity: 0.06;
+}
+
+.logo-deco--page {
+  right: -3%;
+  bottom: -18%;
+  width: 36%;
+  max-width: 400px;
+  opacity: 0.05;
+}
+
 /* ────────────────────────────────────────
    Header
    ──────────────────────────────────────── */
@@ -196,7 +232,7 @@ p {
 }
 
 .header__logo img {
-  height: 34px;
+  height: 44px;
   width: auto;
 }
 
@@ -277,13 +313,20 @@ p {
    Hero (Home)
    ──────────────────────────────────────── */
 .hero {
+  position: relative;
+  overflow: hidden;
   padding: 120px 0 96px;
   text-align: center;
 }
 
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
 .hero__headline {
   font-size: clamp(2.8rem, 7.5vw, 5.5rem);
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.05;
   margin-bottom: 24px;
   letter-spacing: -0.025em;
@@ -349,9 +392,16 @@ p {
    CTA Section
    ──────────────────────────────────────── */
 .cta-section {
+  position: relative;
+  overflow: hidden;
   padding: 96px 0;
-  background: var(--bg-raised);
+  background: var(--bg-surface);
   text-align: center;
+}
+
+.cta-section .container {
+  position: relative;
+  z-index: 1;
 }
 
 .cta-section__title {
@@ -374,7 +424,7 @@ p {
 }
 
 .cta-card {
-  background: var(--bg-surface);
+  background: var(--bg-raised);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 36px;
@@ -437,8 +487,15 @@ p {
    Page Hero (club / app)
    ──────────────────────────────────────── */
 .page-hero {
+  position: relative;
+  overflow: hidden;
   padding: 80px 0 64px;
   border-bottom: 1px solid var(--border);
+}
+
+.page-hero .container {
+  position: relative;
+  z-index: 1;
 }
 
 .page-hero__label {
@@ -452,7 +509,7 @@ p {
 
 .page-hero__title {
   font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: -0.02em;
   margin-bottom: 16px;
 }
@@ -472,7 +529,7 @@ p {
   flex-direction: column;
   gap: 8px;
   margin: 24px 0;
-  max-width: 560px;
+  max-width: 800px;
 }
 
 .feature-list li {
@@ -552,7 +609,6 @@ p {
   margin: 48px 0;
   display: flex;
   flex-direction: column;
-  gap: 72px;
 }
 
 .step {
@@ -560,6 +616,17 @@ p {
   grid-template-columns: 1fr auto;
   gap: 56px;
   align-items: center;
+  padding: 56px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.step:first-child {
+  padding-top: 0;
+}
+
+.step:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 .step--reverse {
@@ -574,13 +641,35 @@ p {
   max-width: 520px;
 }
 
+.step__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.step__badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-size: 0.9rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: var(--font-heading);
+}
+
 .step__number {
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 
 .step__title {
@@ -646,6 +735,10 @@ p {
 
   .page-hero {
     padding: 56px 0 48px;
+  }
+
+  .logo-deco {
+    display: none;
   }
 }
 

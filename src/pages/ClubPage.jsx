@@ -2,12 +2,14 @@ import { Link } from 'react-router-dom'
 import { Instagram } from 'lucide-react'
 import CTASection from '../components/CTASection'
 import { INSTAGRAM_URL } from '../constants'
+import personagem from '../logos/1logobranco.png'
 
 export default function ClubPage() {
   return (
     <main>
       {/* ── Page hero ── */}
       <section className="page-hero">
+        <img src={personagem} alt="" className="logo-deco logo-deco--page" aria-hidden="true" />
         <div className="container">
           <p className="page-hero__label">O Clube</p>
           <h1 className="page-hero__title">O clube por dentro</h1>

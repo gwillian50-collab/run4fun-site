@@ -3,12 +3,14 @@ import { ArrowRight } from 'lucide-react'
 import CTASection from '../components/CTASection'
 import PlaceholderScreenshot from '../components/PlaceholderScreenshot'
 import { APP_URL } from '../constants'
+import personagem from '../logos/1logobranco.png'
 
 export default function AppPage() {
   return (
     <main>
       {/* ── Page hero ── */}
       <section className="page-hero">
+        <img src={personagem} alt="" className="logo-deco logo-deco--page" aria-hidden="true" />
         <div className="container">
           <p className="page-hero__label">O App</p>
           <h1 className="page-hero__title">Seu treino, no seu ritmo</h1>
@@ -46,7 +48,10 @@ export default function AppPage() {
             {/* Passo 1 */}
             <div className="step">
               <div className="step__content">
-                <p className="step__number">Passo 1</p>
+                <div className="step__header">
+                  <span className="step__badge">1</span>
+                  <p className="step__number">Passo 1</p>
+                </div>
                 <h3 className="step__title">Conta pra ele onde você está</h3>
                 <p className="step__body">
                   Sua experiência, sua disponibilidade de dias, e (se tiver) um
@@ -61,7 +66,10 @@ export default function AppPage() {
             {/* Passo 2 */}
             <div className="step step--reverse">
               <div className="step__content">
-                <p className="step__number">Passo 2</p>
+                <div className="step__header">
+                  <span className="step__badge">2</span>
+                  <p className="step__number">Passo 2</p>
+                </div>
                 <h3 className="step__title">Ele monta o plano</h3>
                 <p className="step__body">
                   Semana a semana, treino a treino, adaptado ao seu objetivo e à sua
@@ -76,7 +84,10 @@ export default function AppPage() {
             {/* Passo 3 */}
             <div className="step">
               <div className="step__content">
-                <p className="step__number">Passo 3</p>
+                <div className="step__header">
+                  <span className="step__badge">3</span>
+                  <p className="step__number">Passo 3</p>
+                </div>
                 <h3 className="step__title">Você treina no seu ritmo</h3>
                 <p className="step__body">
                   Marque o que fez, ajuste o que não rolou. Sem culpa, sem pressão.

@@ -2,12 +2,14 @@ import { Link } from 'react-router-dom'
 import { Instagram, ArrowRight } from 'lucide-react'
 import CTASection from '../components/CTASection'
 import { INSTAGRAM_URL, APP_URL } from '../constants'
+import personagem from '../logos/1logobranco.png'
 
 export default function Home() {
   return (
     <main>
       {/* ── Hero ── */}
       <section className="hero">
+        <img src={personagem} alt="" className="logo-deco logo-deco--hero" aria-hidden="true" />
         <div className="container">
           <h1 className="hero__headline">
             A corrida é só<br />
@@ -97,7 +99,17 @@ export default function Home() {
       </section>
 
       {/* ── CTA final (dupla) ── */}
-      <CTASection title="Quer fazer parte?">
+      <CTASection
+        title="Quer fazer parte?"
+        deco={
+          <img
+            src={personagem}
+            alt=""
+            className="logo-deco logo-deco--cta"
+            aria-hidden="true"
+          />
+        }
+      >
         <div className="cta-grid">
           <div className="cta-card">
             <h3 className="cta-card__title">Ver a comunidade de verdade</h3>
