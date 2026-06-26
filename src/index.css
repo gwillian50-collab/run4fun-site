@@ -491,6 +491,17 @@ p {
 }
 
 /* ────────────────────────────────────────
+   Mockup Screenshot
+   ──────────────────────────────────────── */
+.step__mockup {
+  width: 200px;
+  border-radius: 28px;
+  display: block;
+  flex-shrink: 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+}
+
+/* ────────────────────────────────────────
    Page Hero (club / app)
    ──────────────────────────────────────── */
 .page-hero {

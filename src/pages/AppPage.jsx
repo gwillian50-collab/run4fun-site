@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import CTASection from '../components/CTASection'
-import PlaceholderScreenshot from '../components/PlaceholderScreenshot'
 import { APP_URL } from '../constants'
 import personagem from '../logos/1logobranco.png'
+import mockup1 from '../mockup/run4fun_mockup_1_onboarding.png'
+import mockup2 from '../mockup/run4fun_mockup_2_plano_semanal.png'
+import mockup3 from '../mockup/run4fun_mockup_3_detalhe_treino.png'
 
 export default function AppPage() {
   return (
@@ -59,7 +61,7 @@ export default function AppPage() {
                 </p>
               </div>
               <div className="step__screenshot">
-                <PlaceholderScreenshot label="Tela de onboarding" />
+                <img src={mockup1} alt="Tela de onboarding do Run4Fun Coach" className="step__mockup" />
               </div>
             </div>
 
@@ -77,7 +79,7 @@ export default function AppPage() {
                 </p>
               </div>
               <div className="step__screenshot">
-                <PlaceholderScreenshot label="Tela de plano gerado/resumo" />
+                <img src={mockup2} alt="Tela do plano semanal do Run4Fun Coach" className="step__mockup" />
               </div>
             </div>
 
@@ -94,7 +96,7 @@ export default function AppPage() {
                 </p>
               </div>
               <div className="step__screenshot">
-                <PlaceholderScreenshot label="Tela principal de plano/check-in" />
+                <img src={mockup3} alt="Tela de detalhe do treino no Run4Fun Coach" className="step__mockup" />
               </div>
             </div>
           </div>
